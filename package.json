@@ -12,7 +12,7 @@
     "build": "echo 'No build step required for Node.js'"
   },
   "author": "korathak-736769",
-  "license": "ISC",
+  "license": "MIT",
   "description": "URL Shortener API built with Node.js, Express, and MongoDB",
   "keywords": ["url-shortener", "api", "nodejs", "express", "mongodb", "docker"],
   "repository": {
