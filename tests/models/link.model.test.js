@@ -55,7 +55,7 @@ describe('Link Model', () => {
         test('should enforce unique short_code', async () => {
             // Ensure unique index exists
             await LinkModel.ensureIndexes();
-            
+
             const linkData1 = {
                 long_url: 'https://example1.com',
                 short_code: 'abc123'
@@ -108,3 +108,13 @@ describe('Link Model', () => {
         });
     });
 });
+
+
+
+
+
+
+
+
+
+

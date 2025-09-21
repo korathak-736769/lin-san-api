@@ -5,7 +5,6 @@ import linkRoutes from '../../routes/link.route.js';
 import LinkModel from '../../models/link.model.js';
 import { setupTestDB, teardownTestDB, clearTestDB } from '../setup.js';
 
-// Mock the environment config
 jest.mock('../../configs/environment.js', () => ({
     SHORT_CODE_LENGTH: 4
 }));

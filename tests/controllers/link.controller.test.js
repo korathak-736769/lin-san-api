@@ -3,7 +3,6 @@ import { createLink, getHisClickLinks, redirectToLongUrl } from '../../controlle
 import LinkModel from '../../models/link.model.js';
 import { setupTestDB, teardownTestDB, clearTestDB } from '../setup.js';
 
-// Mock the utils
 jest.mock('../../utils/link.js', () => ({
     generateUniqueShortCode: jest.fn(() => Promise.resolve('ABCD'))
 }));

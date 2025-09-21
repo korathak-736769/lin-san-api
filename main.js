@@ -9,6 +9,9 @@ import { PORT } from "./configs/environment.js";
 
 const app = express();
 
+// Trust proxy settings for getting real client IP
+app.set('trust proxy', true);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan("dev"));

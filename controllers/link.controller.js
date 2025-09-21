@@ -46,9 +46,19 @@ export const redirectToLongUrl = async (req, res) => {
             return errorResponse(res, 404, 'link not found');
         }
 
+        const getClientIP = (req) => {
+            return req.headers['x-forwarded-for']?.split(',')[0]?.trim() ||
+                req.headers['x-real-ip'] ||
+                req.headers['x-client-ip'] ||
+                req.connection?.remoteAddress ||
+                req.socket?.remoteAddress ||
+                req.ip ||
+                'unknown';
+        };
+
         const clickData = {
             user_agent: req.headers['user-agent'],
-            ip_address: req.ip,
+            ip_address: getClientIP(req),
         };
 
         await linkModel.updateOne(
